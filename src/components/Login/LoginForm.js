@@ -56,6 +56,7 @@ class LoginForm extends Component {
       toast: "",
     };
     this.handleHide = this.handleHide.bind(this);
+    this.onsubmit = this.onsubmit.bind(this);
   }
 
   onsubmit = () => {
@@ -91,7 +92,7 @@ class LoginForm extends Component {
           toast: (
             <Toast
               severity="success"
-              text="Code has been sent"
+              text={`OTP sent has been sent to ${phoneNumber}`}
               onHide={this.handleHide}
             />
           ),
@@ -106,10 +107,14 @@ class LoginForm extends Component {
         this.setState({ isLoading: false });
       })
       .catch((error) => {
-        // message.error(error);
+        console.log(error);
         this.setState({
           toast: (
-            <Toast severity="error" text={error.message} onHide={this.handleHide} />
+            <Toast
+              severity="error"
+              text={error.message}
+              onHide={this.handleHide}
+            />
           ),
         });
         this.setState({ isLoading: false });
@@ -198,8 +203,13 @@ class LoginForm extends Component {
             />
           </Form.Item>
           <div className="wrong__number">
-            <div className="resend__otp">Resend OTP</div>
-            <div onClick={() => this.refreshPage()} className="change__number">
+            <div className="resend__otp" onClick={this.onsubmit}>
+              Resend OTP
+            </div>
+            <div
+              onClick={() => this.setState({ isAction: false })}
+              className="change__number"
+            >
               Change Number
             </div>
           </div>
