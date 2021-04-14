@@ -1,0 +1,68 @@
+
+  .editaproduct{
+      width: 90%;
+      margin: 40px auto;
+  }
+
+
+  .editaproduct .btn-outline-danger{
+      margin: 20px 0px;
+  }
+
+  .editaproduct .product__details .product__info .row{
+  padding-bottom: 10px;
+}
+
+  .editaproduct .product__details .col-5 h4{
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+  .editaproduct .product__details .col-5{
+    border : 2px solid gray;
+    padding: 10px;
+  }
+
+    .editaproduct .product__details .col-5 .detail{
+      text-align: left;
+      font-size: 15px;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+  }
+
+
+    .editaproduct .product__details .col-5{
+      margin-right: 40px;
+      margin-bottom: 40px;
+    }
+
+    .editaproduct .product__details .col-5 h2{
+      margin : 20px 0px;
+      text-align: center;
+    }
+
+    .editaproduct .product__details .col-5 .btn{
+    margin: 20px 0px;
+    }
+    
+    .editaproduct .end__buttons{
+      margin: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .editaproduct .end__buttons a{
+      text-decoration: none;
+      color: green;
+    }
+
+      .editaproduct .end__buttons a:hover{
+      color: white;
+    }
+
+    .editaproduct .row .inpuut{
+      width: 100px;
+      padding: 2px;
+    }

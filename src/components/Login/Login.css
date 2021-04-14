@@ -1,0 +1,138 @@
+.login{
+    max-width: 100%;
+    border-radius: 100px;
+    /* padding-bottom: 200px; */
+}
+
+.login__modal .modal-content {
+    max-width: 380px;
+    margin: auto;
+    padding: 0px 25px;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    height: 420px;
+}
+
+.login-image{
+    height: 110px;
+    width: auto;
+    margin: auto;
+}
+.logintxt{
+    font-size: 36px;
+    font-family: 'Montserrat', sans-serif; ;
+    font-weight: 700;
+    color: #0C3474;
+}
+.login .in{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    border-bottom: 1px solid;
+    font-size: 10px;
+}
+
+.loginnav{
+    display: flex;
+    flex-direction: row;
+}
+.login .phone__inpt p{
+    font-size: 12px;
+    font-weight: 700;
+    background-color: rgb(223, 223, 223);
+    margin: 5px 0px !important;
+    padding: 10px 5px !important;
+    display: flex;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.phone__inpt{
+    display: flex;
+}
+.login .inpt{
+    min-width: 90%;
+    border: none;
+    border-bottom: 2px solid  #19eeb5;
+    font-family: 'Montserrat', sans-serif;
+    background-color:  rgb(242, 242, 242);
+    font-size: 10px;
+    margin:5px 0px ;
+    height: 40px;
+    padding: 5px;
+}
+
+.fa-eye:before {
+    content: "\f06e";
+    padding: 15px 0px;
+    border-bottom: 1px solid;
+}
+
+input:focus,button:focus{
+    outline: none;
+}
+
+.cross{
+    font-size: 20px;
+    border: none;
+    background-color: white;
+}
+
+
+.login p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 700 !important;
+    padding : 0px 10px 10px 0px;
+}
+
+.login .buttons{
+    margin-top: 50px;
+}
+.login  .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(242, 242, 242);
+    color: black;
+    border: none;
+    margin-top: 50px;
+    font-weight: bold;
+    border-radius: 30px;
+    min-width: 200px;
+}
+
+.login .buttons .btn a{
+    text-decoration: none;
+    color: black;
+}
+
+ .wrong__number{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    color:  #19eeb5;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.login__card{
+        max-width: 360px;
+        margin: 30px auto;
+        border-radius: 30px;
+        box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+    }
+.ant-form-item{
+    margin-bottom: 0px !important;
+}
+
+@media screen and (max-width: 992px){
+    .login__card{
+        width: 300px;
+    }
+}
