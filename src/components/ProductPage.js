@@ -33,7 +33,7 @@ export default function ProductPage(props) {
   const [newval, setval] = useState();
   const [freeGames, setFreeGames] = useState();
   const [freeGame2, setFreeGame2] = useState();
-  let { _id } = useParams();
+  const { _id } = useParams();
   const [pd, setpd] = useState([]);
   const [pdb, setpdb] = useState([]);
   const [pdp, setpdp] = useState([]);
@@ -135,29 +135,26 @@ export default function ProductPage(props) {
     setval(newValue);
     setPrice(newValue);
     let dayVal;
-    if (newValue === 1100) {
+    if (newValue === list1[0]) {
       dayVal = 1;
-    } else if (newValue === 2000) {
+    } else if (newValue === list1[2]) {
       dayVal = 3;
-    } else if (newValue === 3500) {
+    } else if (newValue === list1[6]) {
       dayVal = 7;
-    } else if (newValue === 7600) {
+    } else if (newValue === list1[29]) {
       dayVal = 30;
-    } else if (newValue === 18100) {
+    } else if (newValue === list1[89]) {
       dayVal = 90;
-    } else if (newValue === 30700) {
+    } else if (newValue === list1[179]) {
       dayVal = 180;
     }
-    setday(dayVal)
+    setday(dayVal);
     const newendVal = new Date(
       new Date().setDate(new Date(startdate).getDate() + dayVal)
     );
     setEnddate(
       `${newendVal.getFullYear()}-0${newendVal.getMonth() +
         1}-${newendVal.getDate()}`
-    );
-    setEnddate(
-      `${newendVal.getFullYear()}-0${newendVal.getMonth() + 1}-${newendVal.getDate()}`
     );
   };
   const toggle = () => {
@@ -194,7 +191,8 @@ export default function ProductPage(props) {
       new Date().setDate(new Date(e.target.value).getDate() + day)
     );
     setEnddate(
-      `${newendVal.getFullYear()}-0${newendVal.getMonth() + 1}-${newendVal.getDate()}`
+      `${newendVal.getFullYear()}-0${newendVal.getMonth() +
+        1}-${newendVal.getDate()}`
     );
   };
 
@@ -454,14 +452,24 @@ export default function ProductPage(props) {
               className="date"
               type="date"
               onChange={handleDate}
-              style={{ width: "46%", marginLeft: "10px", padding:"1rem", border: "1px solid rgb(202, 199, 199)" }}
+              style={{
+                width: "46%",
+                marginLeft: "10px",
+                padding: "1rem",
+                border: "1px solid rgb(202, 199, 199)",
+              }}
             />
             <input
               className="date"
               type="date"
               value={enddate}
               disabled
-              style={{ width: "46%", marginLeft: "10px", padding:"1rem", border: "1px solid rgb(202, 199, 199)" }}
+              style={{
+                width: "46%",
+                marginLeft: "10px",
+                padding: "1rem",
+                border: "1px solid rgb(202, 199, 199)",
+              }}
             />
             <div className="date__output">
               {/* <p>{startdate}</p> */}
@@ -560,7 +568,7 @@ export default function ProductPage(props) {
               <p>Coupon Applied</p>
             </div>
             <button className="col-5" onClick={orderplace}>
-              + Add To Bag 
+              + Add To Bag
             </button>
           </div>
         </div>
